@@ -1,10 +1,14 @@
-<img src="assets/logo.png" width="112" height="112" alt="Egret logo">
+<img src="assets/logo.png" width="112" height="112" alt="A white egret with trailing plumes stretches its elegant neck.">
 
 # Egret
 
 Summarize richness, singletons and dominance in an ecological field survey. This Blyx workflow framework is part of the geospatial and scientific computing collection.
 
 Two surveys can have the same species count and very different abundance patterns. Report diversity alongside observed richness. [scikit-bio, Simpson dominance](https://scikit.bio/docs/latest/generated/skbio.diversity.alpha.dominance.html)
+
+## Editor extension
+
+Install **RahulChaube.blyx-egret** to run the worked example and use the framework’s function completions in a Blyx file. Open an empty `.blyx` file, enter `blyx-egret-demo`, then choose **Blyx: Run File**. [Editor downloads](https://www.blyx-lang.space/packages/egret#editor) · [Download the extension](https://github.com/Rahulchaube1/blyxxxx/releases/download/framework-editors-v0.1.0/blyx-egret-0.1.0.vsix) · [Starter with framework source](https://github.com/Rahulchaube1/blyxxxx/releases/download/framework-editors-v0.1.0/blyx-egret-starter-0.1.0.zip)
 
 ## Install and run
 
@@ -79,7 +83,7 @@ This release includes identical copies of both library modules so a tagged clone
 
 ## Verification and contributions
 
-The regression suite in [tests.blyx](tests.blyx) checks the example, boundary cases and invalid inputs. Include a short reproducer and your compiler version in [an issue](https://github.com/Rahulchaube1/blyx-egret/issues). The source is dual-licensed under [MIT](LICENSE-MIT) or [Apache-2.0](LICENSE-APACHE). The package artwork uses [Lucide icons](https://lucide.dev/license); see [artwork notices](assets/NOTICE.txt).
+The regression suite in [tests.blyx](tests.blyx) checks the example, boundary cases and invalid inputs. Include a short reproducer and your compiler version in [an issue](https://github.com/Rahulchaube1/blyx-egret/issues). The source is dual-licensed under [MIT](LICENSE-MIT) or [Apache-2.0](LICENSE-APACHE). The [artwork notice](assets/NOTICE.txt) records credits for earlier editions.
 
 ## Connect with Rahul Chaube
 

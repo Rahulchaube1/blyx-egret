@@ -1,0 +1,44 @@
+use richness;
+use dominance;
+
+fn egret_finite(values: vector) -> bool {
+    let mut i = 0;
+    while i < len(values) {
+        let value = at(values, i);
+        if !(value - value == 0.0) {
+            return false;
+        }
+        i += 1;
+    }
+    true
+}
+
+fn egret_counts(values: vector) -> bool {
+    let mut i = 0;
+    while i < len(values) {
+        let value = at(values, i);
+        if !(value >= 0.0 && value <= 9007199254740991.0 && value % 1.0 == 0.0) {
+            return false;
+        }
+        i += 1;
+    }
+    true
+}
+
+fn egret_compute(counts: vector) -> vector {
+    let detail = richness_observe(counts);
+    let conc = dominance_simpson(counts);
+    if len(detail) == 0 || len(conc) == 0 {
+        return [];
+    }
+    [at(detail, 2), at(detail, 0), at(detail, 1), at(conc, 0), 1.0 / at(conc, 0)]
+}
+
+// Summarize richness, singletons and dominance in an ecological field survey.
+// Returns [individuals, observed taxa, singletons, dominance, effective taxa]. An entirely empty survey has no diversity estimate.
+pub fn egret_survey(counts: vector) -> vector {
+    if !egret_counts(counts) { return []; }
+    let result = egret_compute(counts);
+    if !egret_finite(result) { return []; }
+    result
+}
